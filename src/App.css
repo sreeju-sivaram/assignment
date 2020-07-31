@@ -7,6 +7,46 @@
   pointer-events: none;
 }
 
+.container {
+  display: flex;
+}
+
+.card-high-temp {
+  background-color: rgb(255 0 0 / 53%) !important;
+  height: 40vh;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+.MuiAppBar-colorPrimary {
+  color: #fff !important;
+  background-color: #464646 !important;
+}
+
+.card-low-temp {
+  background-color: rgb(31 31 218 / 47%) !important;
+  height: 40vh;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+.temp {
+  display: flex;
+  flex-direction: row;
+}
+
+.sub {
+  margin-left: 8vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
