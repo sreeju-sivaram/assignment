@@ -23,7 +23,6 @@
 
 .card-high-temp {
   background-color: rgb(255 0 0 / 53%) !important;
-  height: 40vh;
   margin-top: 50px;
   margin-left: 10px;
 }
@@ -35,7 +34,6 @@
 
 .card-low-temp {
   background-color: rgb(31 31 218 / 47%) !important;
-  height: 40vh;
   margin-top: 50px;
   margin-left: 10px;
 }
@@ -46,7 +44,7 @@
 }
 
 .sub {
-  margin-left: 8vw;
+  margin-left: 4vw;
   display: flex;
   flex-direction: column;
 }
