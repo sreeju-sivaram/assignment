@@ -11,6 +11,16 @@
   display: flex;
 }
 
+.search-bar {
+  width: 30vw;
+  margin-left: 25px;
+  margin-bottom: 6px;
+}
+
+.MuiAutocomplete-inputRoot {
+  padding: 2px !important;
+}
+
 .card-high-temp {
   background-color: rgb(255 0 0 / 53%) !important;
   height: 40vh;
