@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import PrimarySearchAppBar from './Navbar';
 import MediaCard from './Card';
@@ -9,7 +8,7 @@ import Image from './sky.jpg';
 const styles = {
   paperContainer: {
       backgroundImage: `url(${Image})`,
-      height: "100vh",
+      height: "200vh",
   }
 };
 
@@ -17,7 +16,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      city: 'London'
+      city: 'Bangalore'
     }
   }
 

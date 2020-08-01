@@ -1,10 +1,7 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import OpacityIcon from '@material-ui/icons/Opacity';
 import Typography from '@material-ui/core/Typography';
 import moment from 'moment';
@@ -34,8 +31,10 @@ export default class MediaCard extends React.Component {
         this.getWeatherDetails(this.props.city);
     };
 
-    componentDidUpdate() {
-        this.getWeatherDetails(this.props.city);
+    componentDidUpdate(previousProps, previousState) {
+        if(previousProps.city !== this.props.city) {
+            this.getWeatherDetails(this.props.city);
+        }
     }
     render() {
         const { weatherData } = this.state;

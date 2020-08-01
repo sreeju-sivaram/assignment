@@ -4,10 +4,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import InputBase from '@material-ui/core/InputBase';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import HomeIcon from '@material-ui/icons/Home';
@@ -83,10 +81,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function PrimarySearchAppBar(props) {
-    console.log('props-----**', props);
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [value, setValue] = React.useState()
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
   const isMenuOpen = Boolean(anchorEl);
@@ -181,38 +177,25 @@ export default function PrimarySearchAppBar(props) {
             options={cities.map((option) => option)}
             onChange={(event, value) => {
                 props.setCity(value)
-                setValue(value)
             }}
             renderInput={(params) => (
-          <TextField
-            classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-            }}
-            {...params}
-            placeholder="Search…"
-            margin="normal"
-            variant="outlined"
-            InputProps={{ 
-                ...params.InputProps,
-                startAdornment: <InputAdornment position="start"> <SearchIcon /></InputAdornment>,
-                type: 'search' }}
-          />
-        )}
-      />
-            {/* <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-              onKeyDown={handleKeyDown}
-              onChange={(event) => {
-                    setValue(event.target.value)
-                }}
-            /> */}
-          </div>
+                <TextField
+                    classes={{
+                        root: classes.inputRoot,
+                        input: classes.inputInput,
+                    }}
+                    {...params}
+                    placeholder="Search…"
+                    margin="normal"
+                    variant="outlined"
+                    InputProps={{ 
+                        ...params.InputProps,
+                        startAdornment: <InputAdornment position="start"> <SearchIcon /></InputAdornment>,
+                        type: 'search' }}
+                />
+                )}
+            />
+         </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <Tooltip title="Home">
